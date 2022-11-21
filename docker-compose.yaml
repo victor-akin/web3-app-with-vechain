@@ -11,24 +11,24 @@ services:
     ports:
       - '3000:3000'
 
-  # vechain-testnet:
-  #   container_name: vechain_testnet_node
-  #   image: vechain/thor
-  #   volumes:
-  #     - ./vechain-block-data:/root/.org.vechain.thor
-  #   command:
-  #     [
-  #       '--network',
-  #       'test',
-  #       '--api-addr',
-  #       '0.0.0.0:8669',
-  #       '--bootnode',
-  #       'enode://4a2bb9bb8fe46fdcdf56dc01bbe50b09ed51b3f72bcefa6305cc41760fa145970c6ba6b8cf2c6659bb5410218632b05c455f2f16d918eaa93d839824b328bc2f@65.109.33.132:11235',
-  #     ]
-  #   ports:
-  #     - '8669:8669'
-  #     - '11235:11235'
-  #     - '11235:11235/udp'
+  vechain-testnet:
+    container_name: vechain_testnet_node
+    image: vechain/thor
+    volumes:
+      - ./vechain-block-data:/root/.org.vechain.thor
+    command:
+      [
+        '--network',
+        'test',
+        '--api-addr',
+        '0.0.0.0:8669',
+        '--bootnode',
+        'enode://4a2bb9bb8fe46fdcdf56dc01bbe50b09ed51b3f72bcefa6305cc41760fa145970c6ba6b8cf2c6659bb5410218632b05c455f2f16d918eaa93d839824b328bc2f@65.109.33.132:11235',
+      ]
+    ports:
+      - '8669:8669'
+      - '11235:11235'
+      - '11235:11235/udp'
 
 networks:
   vechain_local_net:
