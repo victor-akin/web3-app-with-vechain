@@ -1,13 +1,19 @@
 {
-	"name": "vechain-node-server",
+	"name": "web3-app-with-vechain",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "This projects sets up a Vechain node and has a client and server to wotk with it",
+	"main": "",
 	"scripts": {
 		"test": "",
-		"server:watch": "cd ./server && tsc"
+		"server:watch": "cd ./server && tsc --watch",
+		"dev:client": "cd ./client && npm run dev",
+		"start:server:dev": "cd ./server && npm run dev",
+		"dev": "concurrently \"npm:server:watch\" \"npm:dev:client\" \"npm:start:server:dev\""
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^7.6.0"
+	}
 }

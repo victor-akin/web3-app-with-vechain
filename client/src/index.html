@@ -4,9 +4,39 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
 		<title>Vechain Project</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="relative bg-white">
+			<div class="mx-auto max-w-7xl px-6">
+				<div
+					class="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10"
+				>
+					<div class="flex justify-start lg:w-0 lg:flex-1">
+						<a href="#">
+							<img class="h-8 w-auto sm:h-10" src="./vechain-img.jpeg" alt="" />
+						</a>
+					</div>
+					<div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+						<a
+							id="connect-wallet"
+							href="#"
+							class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-btn px-4 py-2 text-base font-medium text-white shadow-sm"
+							>Login with Vechain wallet</a
+						>
+					</div>
+					<div class="flex -space-x-1 overflow-hidden hidden avatar">
+						<img
+							class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+							src="https://www.pngkey.com/png/detail/157-1579943_no-profile-picture-round.png"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
 
-	<script src="build/index.js"></script>
+		<script type="module" src="./index.ts"></script>
+	</body>
 </html>
